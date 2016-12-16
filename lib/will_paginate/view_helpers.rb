@@ -21,7 +21,7 @@ module WillPaginate
 
     # default view options
     self.pagination_options = Deprecation::Hash.new \
-      :class          => 'pagination',
+      :class          => 'mu-pagination',
       :previous_label => nil,
       :next_label     => nil,
       :inner_window   => 4, # links around the current page
