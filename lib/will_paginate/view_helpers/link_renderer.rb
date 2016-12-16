@@ -67,12 +67,12 @@ module WillPaginate
         if page
           link(text, page, :class => classname)
         else
-          tag(:span, text, :class => classname + ' disabled')
+          "<li>" + tag(:span, text, :class => classname + ' disabled') + "</li>"
         end
       end
       
       def html_container(html)
-        tag(:div, html, container_attributes)
+        tag(:div, "<nav><ul class='pagination'>"+html+"</ul></nav>", container_attributes)
       end
       
       # Returns URL params for +page_link_or_span+, taking the current GET params
