@@ -42,7 +42,7 @@ module WillPaginate
     
       def page_number(page)
         if page == current_page
-          tag(:li, page, :class => 'active')
+          tag(:li, "<a>"+page+"</a>", :class => 'active')
         else
           link(page, page, :rel => rel_value(page))
         end
